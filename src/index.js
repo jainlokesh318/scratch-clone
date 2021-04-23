@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "tailwindcss/tailwind.css";
-
-console.log("hi");
+import { PositionProvider } from "./contexts/PositionContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PositionProvider>
+      <App />
+    </PositionProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
