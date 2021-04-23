@@ -2,7 +2,7 @@ import React from "react";
 import Icon from "./Icon";
 import { usePosition } from "../contexts/PositionContext";
 
-function RotateClockwise(props) {
+function RotateClockwise({ id, className, draggable }) {
   const { angle, setAngle } = usePosition();
 
   const dragStart = (e) => {
@@ -21,9 +21,9 @@ function RotateClockwise(props) {
 
   return (
     <div
-      id={props.id}
-      className={`flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer ${props.className}`}
-      draggable={props.draggable}
+      id={id}
+      className={`flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer ${className}`}
+      draggable={draggable}
       onDragStart={dragStart}
       onDragOver={dragOver}
       onClick={() => {

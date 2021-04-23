@@ -1,6 +1,5 @@
 import React from "react";
 import Icon from "./Icon";
-import { usePosition } from "../contexts/PositionContext";
 
 import MoveForward from "./MoveForward";
 import MoveBackward from "./MoveBackward";
@@ -9,9 +8,7 @@ import MoveDown from "./MoveDown";
 import RotateClockwise from "./RotateClockwise";
 import RotateAntiClockwise from "./RotateAntiClockwise";
 
-export default function Sidebar(props) {
-  const { x, setX, setY, y, angle, setAngle } = usePosition();
-
+export default function Sidebar({ className, id }) {
   const drop = (e) => {
     e.preventDefault();
     const codeBlockId = e.dataTransfer.getData("codeBlockId");
@@ -28,10 +25,10 @@ export default function Sidebar(props) {
 
   return (
     <div
-      className={`w-60 flex-none h-full overflow-y-auto flex flex-col items-start p-2 border-r border-gray-200 ${props.className}`}
+      className={`w-60 flex-none h-full overflow-y-auto flex flex-col items-start p-2 border-r border-gray-200 ${className}`}
       onDrop={drop}
       onDragOver={dragOver}
-      id={props.id}
+      id={id}
     >
       <div className="font-bold"> {"Events"} </div>
       <div className="flex flex-row flex-wrap bg-yellow-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
