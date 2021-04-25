@@ -7,11 +7,12 @@ function Nav() {
           <img src="/icons/scratch-icon.svg" height="100px" width="100px"></img>
         </a>
 
-        <a href="#" className="float-right mx-2 my-2">
-          Join Scratch
-        </a>
+
         <a href="#" className="mx-2 float-right my-2">
           Sign in
+        </a>
+        <a href="#" className="float-right mx-2 my-2">
+          Join Scratch
         </a>
     </div>
     )
