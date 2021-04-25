@@ -14,6 +14,8 @@ export default function Sidebar({ className, id }) {
     const codeBlockId = e.dataTransfer.getData("codeBlockId");
 
     const codeBlock = document.getElementById(codeBlockId);
+    console.log({codeBlock})
+  
     codeBlock.style.display = "block";
 
     e.target.appendChild(codeBlock);
@@ -21,7 +23,9 @@ export default function Sidebar({ className, id }) {
 
   const dragOver = (e) => {
     e.preventDefault();
+    
   };
+
 
   return (
     <div

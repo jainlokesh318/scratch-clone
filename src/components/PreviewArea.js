@@ -10,13 +10,9 @@ export default function PreviewArea({ preview }) {
   r.style.setProperty("--angle", angle);
 
   var rs = getComputedStyle(r);
-  console.log(rs.getPropertyValue("--angle"));
-
-  console.log({ x });
 
   return (
     <div className="flex-none h-full overflow-y-auto p-2 grid">
-      {console.log("From in", { x })}
       {preview.map((row, indexX) =>
         row.map((cell, indexY) =>
           indexX === x && indexY === y ? (

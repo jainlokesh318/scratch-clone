@@ -1,6 +1,9 @@
 import React from "react";
 
+import Icon from "./Icon";
+
 export default function MidArea(props) {
+
   const drop = (e) => {
     e.preventDefault();
     const codeBlockId = e.dataTransfer.getData("codeBlockId");

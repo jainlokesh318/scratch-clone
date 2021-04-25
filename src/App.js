@@ -2,11 +2,13 @@ import React from "react";
 import Sidebar from "./components/Sidebar";
 import MidArea from "./components/MidArea";
 import PreviewArea from "./components/PreviewArea";
+import RunCode from "./components/RunCode";
 import { createPreview } from "./previewHelper";
 
 export default function App() {
   return (
-    <div className="bg-blue-100 pt-6 font-sans">
+    <div className="bg-blue-100 font-sans">      
+      <RunCode/>
       <div className="h-screen overflow-hidden flex flex-row  ">
         <div className="flex-1 h-screen overflow-hidden flex flex-row bg-white border-t border-r border-gray-200 rounded-tr-xl mr-2">
           <Sidebar id="sideBar" /> <MidArea id="midArea" />
