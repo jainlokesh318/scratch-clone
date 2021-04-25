@@ -20,7 +20,7 @@ export default function MidArea(props) {
 
   return (
     <div
-      className={`flex-1 h-full overflow-auto ${props.className}`}
+      className={`flex-1 overflow-auto bg-gray-100 ${props.className}`}
       id={props.id}
       onDrop={drop}
       onDragOver={dragOver}

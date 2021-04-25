@@ -29,7 +29,7 @@ export default function Sidebar({ className, id }) {
 
   return (
     <div
-      className={`w-60 flex-none h-full overflow-y-auto flex flex-col items-start p-2 border-r border-gray-200 ${className}`}
+      className={`w-60 flex-none overflow-y-auto flex flex-col items-start p-2 border-r border-gray-300 bg-gray-100 ${className}`}
       onDrop={drop}
       onDragOver={dragOver}
       id={id}

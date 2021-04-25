@@ -12,7 +12,7 @@ export default function PreviewArea({ preview }) {
   var rs = getComputedStyle(r);
 
   return (
-    <div className="flex-none h-full overflow-y-auto p-2 grid">
+    <div className="flex-none overflow-y-auto p-2 grid">
       {preview.map((row, indexX) =>
         row.map((cell, indexY) =>
           indexX === x && indexY === y ? (

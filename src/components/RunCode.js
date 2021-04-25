@@ -1,4 +1,5 @@
 import React from 'react'
+import Icon from "./Icon";
 
 function RunCode() {
 
@@ -24,10 +25,16 @@ function RunCode() {
 
     return (
         <div className="flex justify-end">
-            <div className="flex flex-row flex-wrap text-white px-2 py-1 my-2 mx-5 cursor-pointer bg-red-500 rounded-xl"
+            <div className="my-3 mx-2 cursor-pointer"
              onClick={runCode}
              >
-             Run Code
+                <Icon name="flag" size={25} className="text-green-600 mx-2" />
+            </div>
+
+            <div className="my-3 mx-2 cursor-pointer"
+             onClick={runCode}
+             >
+                <Icon name="stop" size={25} className="text-red-600 mx-2" />
             </div>
         </div>
     )
